@@ -2,19 +2,16 @@ package com.abacus.model;
 
 import java.time.LocalDateTime;
 
-/**
- * Created by jmachado on 25/02/2015.
- */
 public class User {
 
     private long id;
-    private String username;
     private String password;
     private String salt;
     private String name;
     private String email;
-    private LocalDateTime registrationDate;
-    private Boolean enabled;
+    private LocalDateTime createdOn;
+    private boolean active;
+    private boolean blocked;
 
     public long getId() {
         return id;
@@ -22,14 +19,6 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
@@ -64,19 +53,27 @@ public class User {
         this.email = email;
     }
 
-    public LocalDateTime getRegistrationDate() {
-        return registrationDate;
+    public LocalDateTime getCreatedOn() {
+        return createdOn;
     }
 
-    public void setRegistrationDate(LocalDateTime registrationDate) {
-        this.registrationDate = registrationDate;
+    public void setCreatedOn(LocalDateTime createdOn) {
+        this.createdOn = createdOn;
     }
 
-    public Boolean getEnabled() {
-        return enabled;
+    public boolean isActive() {
+        return active;
     }
 
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
     }
 }
